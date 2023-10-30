@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Font Control</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>Font Control</h1>
+    
+    <p id="text">Etymology
+
+"Halloween" (1785) by Scottish poet Robert Burns, recounts various legends of the holiday.
+The word Halloween or Hallowe'en ("Saints' evening"[37]) is of Christian origin;[38][39] a term equivalent to "All Hallows Eve" is attested in Old English.[40] The word hallowe[']en comes from the Scottish form of All Hallows' Eve (the evening before All Hallows' Day):[41] even is the Scots term for "eve" or "evening",[42] and is contracted to e'en or een;[43] (All) Hallow(s) E(v)en became Hallowe'en.</p>
+    
+    <label for="textColorR">Text Color (R):</label>
+    <input type="number" id="textColorR" min="0" max="255">
+    
+    <label for="textColorG">Text Color (G):</label>
+    <input type="number" id="textColorG" min="0" max="255">
+    
+    <label for="textColorB">Text Color (B):</label>
+    <input type="number" id="textColorB" min="0" max="255">
+    
+    <label for="borderColorR">Border Color (R):</label>
+    <input type="number" id="borderColorR" min="0" max="255">
+    
+    <label for="borderColorG">Border Color (G):</label>
+    <input type="number" id="borderColorG" min="0" max="255">
+    
+    <label for="borderColorB">Border Color (B):</label>
+    <input type="number" id="borderColorB" min="0" max="255">
+    
+    <label for="borderWidth">Border Width (px):</label>
+    <input type="number" id="borderWidth" min="0">
+    
+    <button onclick="applyStyles()">Apply Styles</button>
+    
+    <script>
+        function applyStyles() {
+            const textColorR = document.getElementById("textColorR").value;
+            const textColorG = document.getElementById("textColorG").value;
+            const textColorB = document.getElementById("textColorB").value;
+            const borderColorR = document.getElementById("borderColorR").value;
+            const borderColorG = document.getElementById("borderColorG").value;
+            const borderColorB = document.getElementById("borderColorB").value;
+            const borderWidth = document.getElementById("borderWidth").value;
+            
+            document.getElementById("text").style.color = `rgb(${textColorR},${textColorG},${textColorB})`;
+            document.getElementById("text").style.borderWidth = `${borderWidth}px`;
+            document.getElementById("text").style.borderColor = `rgb(${borderColorR},${borderColorG},${borderColorB})`;
+        }
+    </script>
+</body>
+
+</html>
+
+
